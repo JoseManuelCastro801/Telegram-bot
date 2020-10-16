@@ -29,7 +29,8 @@ function calculaImpuesto (valor){
 
 bot.command(command1,(ctx) =>{
 
-    let msj = (ctx.message.text).substring(command1.length+1,ctx.message.text.length);
+    const msj = ctx.message.text.replace(command1,'').trim();
+    //let msj = (ctx.message.text).substring(command1.length+1,ctx.message.text.length);
     ctx.reply(calculaImpuesto(msj));
 
 })
